@@ -15,10 +15,10 @@ def main(argv):
 
   # The binary is calling scanf("%8s %8s %8s %8s").
   # (!)
-  password0 = claripy.BVS('password0', 64)
-  password1 = claripy.BVS('password1', 64)
-  password2 = claripy.BVS('password2', 64)
-  password3 = claripy.BVS('password3', 64)
+  password0 = claripy.BVS('password0', 8*8)
+  password1 = claripy.BVS('password1', 8*8)
+  password2 = claripy.BVS('password2', 8*8)
+  password3 = claripy.BVS('password3', 8*8)
 
   # Determine the address of the global variable to which scanf writes the user
   # input. The function 'initial_state.memory.store(address, value)' will write
